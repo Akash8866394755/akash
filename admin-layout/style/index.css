@@ -1,0 +1,187 @@
+body {
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+::placeholder {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#container {
+    background: #ddd;
+    height: 100vh;
+}
+#sidenav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgb(232, 178, 178);
+    width: 0px;
+    height: 100%;
+}
+#section {
+    background: white;
+    height: 100vh;
+    width: calc(100% - 250px);
+    margin-left: 250px;
+    
+}
+#section #topnav {
+    width: calc(100% - 250px);
+    box-shadow: 0 0 10px 0 #ddd;
+    padding: 24px;
+    position: fixed ;
+    top: 0;
+    left: 250px;
+}
+#toolbox {
+    display: flex;
+    align-items: center;
+    /* gap: 20px; */
+}
+#brand-name {
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+}
+#toolbox button {
+  
+    background-color: none;
+    font-size: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+    font-weight: 700;
+    display: none;
+    
+    
+}
+#sidenav-box{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 12px;
+}
+#sidenav-box button{
+    border: none;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+#btn1 {
+    background-color: red;
+    
+}
+#btn2 {
+    background-color: dodgerblue;
+    
+}
+    
+
+#content {
+    padding: 100px 40px;
+    overflow: hidden;
+}
+#register {
+    display: block;
+}
+
+#signin {
+    display: none;
+}
+#card {
+    width: 300px;
+    box-shadow: 0 0 10px 0 #ddd;
+    padding: 8px;
+}
+#card form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px;
+}
+#card form input:focus {
+    /* outline-color:dodgerblue; */
+    outline: 1px solid dodgerblue;
+    border: none;
+}
+#card form input {
+    padding: 12px;
+    border:1px solid #ccc;
+}
+#card h2 {
+    
+    font-family: sans-serif;
+    color: dodgerblue;
+    margin: 0;    
+    margin-bottom: 5px;
+    margin-left: 16px;
+    padding-top: 5px;
+
+}
+#card button[type='submit'] {
+    width: fit-content;
+    padding: 12px 24px;
+    background: dodgerblue;
+    border: none;
+    color: white;
+    box-shadow: 0 0 12px #ccc;
+    cursor: pointer;
+    margin-top: 12px;
+}
+#card button[type='button'] {
+        cursor: pointer;
+}
+#password-container {
+    display: flex;
+    position: relative;
+}
+#password-container button i {
+    color: dodgerblue;
+}
+#password-container button {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: none;
+    position: absolute;
+    top: 6px;
+    right: 10px;
+    transition: .3s;
+    text-align: center;
+    background-color: inherit;
+    background: #fbf4f4;
+}
+
+#password, #login-password {
+    
+    width: 100%;
+}
+#firstname-message, #lastname-message, #email-message, #password-message, #login-email-message, #login-password-message {
+    color: red;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    padding: 4px 0;
+    display: none;
+}
+
+@media (max-width: 768px) {
+  
+    #sidenav {
+        width: 0px;
+    }
+    #section {
+        width: 100%;
+        margin-left: 0px;
+    }
+    #section #topnav {
+        left: 0px;
+        width: 100%;
+     
+    }
+    #toolbox button {
+        display: block;
+    }
+    
+}

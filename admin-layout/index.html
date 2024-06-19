@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.6.0/css/all.min.css" />
+    <link rel="stylesheet" href="style/index.css" />
+</head>
+<body>
+    <div id="container">
+        <div id="sidenav">
+            <div id="sidenav-box">
+                <button id="btn1" onclick="tab('register', 'signin', this, 'btn2')">Register</button>
+                <button id="btn2" onclick="tab('signin', 'register', this, 'btn1')">Signin</button>
+            </div>
+        </div>
+        <div id="section">
+            <div id="topnav">
+                <div id="toolbox">
+                    <button onclick="toggle()">=</button>
+                    <h1 id="brand-name">Code karo</h1>
+                    
+                </div>
+                
+            </div>
+            <div id="content">
+                <div id="register" class="animate__animated animate__fadeIn">
+                    <div id="card">
+                        <h2>Register</h2>
+                        <form onsubmit="signup(event)" name="register" autocomplete="off">
+                            <input type="text" placeholder="First Name" name="firstname" oninput="onInputValidation(this, 'firstname-message')" />
+                            <p id="firstname-message" class="animate__animated animate__fadeIn"></p>
+
+                            <input type="text" placeholder="Last Name" name="lastname" oninput="onInputValidation(this, 'lastname-message')" />
+                            <p id="lastname-message" class="animate__animated animate__fadeIn"></p>
+
+                            <input type="email" placeholder="example@gamil.com" name="email" oninput="onInputValidation(this, 'email-message')" />
+                            <p id="email-message" class="animate__animated animate__fadeIn"></p>
+                            <div id="password-container">
+                                <input type="password" placeholder="*** *** ***" name="password" oninput="onInputValidation(this, 'password-message')" id="password" />
+                                <button type="button" onclick="togglePassword('password')">
+                                    <i class="fa fa-eye" id="eye-icon"></i>
+                                </button>
+                            </div>
+                            
+                            <p id="password-message" class="animate__animated animate__fadeIn"></p>
+
+                            <button type="submit" id="registerBtn">Register</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div id="signin" class="animate__animated animate__fadeIn">
+                    <div id="card">
+                        <h2>Signin</h2>
+                        <form name="login" autocomplete="off" onsubmit="signin(event)">
+                            <input type="email" placeholder="Email" name="email" oninput="onInputValidation(this, 'login-email-message')" />
+                            <p id="login-email-message" class="animate__animated animate__fadeIn"></p>
+                            <div id="password-container">
+                                <input type="password" placeholder="*** *** ***" name="password" oninput="onInputValidation(this, 'login-password-message')" id="login-password" />
+                                
+                                <button type="button" onclick="togglePassword('login-password')">
+                                    <i class="fa fa-eye" id="eye-icon"></i>
+                                </button>
+                            </div>
+                            <p id="login-password-message" class="animate__animated animate__fadeIn"></p>
+                            <button type="submit" id="signinBtn">Signin</button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+            
+        </div>
+    </div>
+  
+    <script src="script/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+</body>
+</html>
